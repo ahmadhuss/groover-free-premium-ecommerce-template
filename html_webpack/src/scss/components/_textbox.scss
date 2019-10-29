@@ -1,0 +1,19 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Textbox component.
+// -----------------------------------------------------------------------------
+
+/* Textbox component */
+.text-field {
+  background-color: $g-white;
+  border: 1px solid #eceff8;
+  color: #333333;
+  font-size: 14px;
+  height: 45px;
+  padding: 0 15px;
+  width: 100%;
+  transition: all .3s;
+  &:focus {
+    outline: 0;
+    border-color: $g-brand-secondary-color;
+  }
+}

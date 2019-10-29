@@ -1,0 +1,213 @@
+// -----------------------------------------------------------------------------
+// This file contains all media queries that is used by layout.
+// -----------------------------------------------------------------------------
+
+/*--------------------------------------------------------------
+#{$y}
+--------------------------------------------------------------*/
+
+/* Medium devices (tablets, less than and equal to 991px) */
+@media (max-width: 991px) {
+  /* #{$g-1} */
+  .primary-nav,.secondary-nav {
+    text-align: center;
+    float: none;
+  }
+  /* #{$g-2} */
+  .mid-nav {
+    text-align: right;
+    > li {
+      margin-left: 0;
+    }
+  }
+  /* #{$g-4} */
+  .fixed-responsive-container {
+    display: block;
+  }
+
+
+
+  /* #{$g-6} */
+    .full-layer-bottom-header {
+      padding-bottom: 80px;
+  }
+  /* #{$h-2} */
+  .mid-footer-wrapper {
+    padding-bottom: 12px;
+  }
+
+/*--------------------------------------------------------------
+#{$s}
+--------------------------------------------------------------*/
+  /* Products-List-Wrapper */
+  .table-wrapper {
+    > table {
+      text-align: center;
+    }
+  }
+
+  .cart-anchor-image {
+    > a {
+
+      > img {
+        margin: 0 0 8px;
+      }
+
+      > h6 {
+        display: block;
+      }
+    }
+  }
+
+  .action-wrapper {
+    button {
+      display: block;
+    }
+    // delete
+    .fa-trash {
+      margin-left: 0;
+      margin-top: 6px;
+    }
+
+  }
+  /*--------------------------------------------------------------
+  #{$u}
+  --------------------------------------------------------------*/
+  .login-wrapper:after {
+    content: none;
+  }
+}
+
+// Small devices (landscape phones, less than and equal to 767px)
+@media (max-width: 767px) {
+/*--------------------------------------------------------------
+#{$h}
+--------------------------------------------------------------*/
+  /* #{$h-2} */
+.footer-list {
+margin-bottom: 40px;
+}
+
+
+/*--------------------------------------------------------------
+#{$i}
+--------------------------------------------------------------*/
+  /* #{$i-1} */
+  .newsletter-image {
+    display: block;
+    margin-bottom: 30px;
+  }
+/*--------------------------------------------------------------
+#{$p}
+--------------------------------------------------------------*/
+  /* #{$p-1} */
+  .zoom-area {
+    text-align: center;
+  }
+  /* #{$p-2} */
+  .all-information-wrapper {
+    text-align: center;
+    margin: 30px 0;
+  }
+
+  /* #{$p-6} */
+  // Average Rating, Star Meter
+  .r-1 {
+    [class*="col-"]:last-child {
+      border-left-width: 0;
+    }
+  }
+
+/*--------------------------------------------------------------
+#{$s}
+--------------------------------------------------------------*/
+  /* Coupon */
+  .coupon-continue-checkout {
+    display: block;
+    text-align: center;
+
+    .coupon-area, .button-area {
+      display: block;
+      width: 100%;
+    }
+
+    .coupon-area {
+      margin-bottom: 16px;
+    }
+    .button-area {
+      text-align: center;
+      .checkout {
+        margin: 6px 0 0 0;
+      }
+    }
+
+  }
+/*--------------------------------------------------------------
+#{$w}
+--------------------------------------------------------------*/
+  /* #{$w-2} */
+  .page-bar {
+    text-align: center;
+    .shop-settings {
+      margin-bottom: 8px;
+      float: none;
+    }
+    .toolbar-sorter {
+      margin: 0 0 8px 0;
+    }
+    .toolbar-sorter, .toolbar-sorter-2 {
+      float: none;
+    }
+  }
+
+  /* #{$w-4} */
+  .list-style {
+      .item {
+        display: block;
+        border-spacing: 0;
+        // only works for second portion because first portion has fixed width First portion
+        text-align: center;
+      }
+        .image-container {
+          // important property
+          display: block;
+          margin: 0 auto;
+          padding: 15px;
+        }
+
+        // Second portion
+        .item-content {
+          display: block;
+        }
+      }
+
+  }
+
+
+
+/* Extra small devices (portrait phones, less than and equal to 575px) */
+@media (max-width: 575px) {
+  /* #{$o}  */
+  .align-center {
+    h1 {
+      font-size: 155px;
+    }
+  }
+
+
+
+  /* #{$g-2}  */
+  .brand-logo,.mid-nav {
+    text-align: center;
+  }
+
+  .mid-nav {
+    > li {
+      margin-left: 0;
+    }
+  }
+  .item-counter {
+    left: 90px;
+    top: 8px;
+  }
+}

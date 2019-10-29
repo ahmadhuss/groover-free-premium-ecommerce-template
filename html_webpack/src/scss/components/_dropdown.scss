@@ -1,0 +1,131 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the dropdown component.
+// -----------------------------------------------------------------------------
+
+/* Dropdown component */
+.g-nav {
+  margin: 0;
+  padding: 0;
+  > li {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    > a {
+      display: block;
+      font-size: 13px;
+      padding: 14px 10px;
+      > i.fas.fa-chevron-down {
+        font-size: 6px;
+        color: #aeaeae;
+      }
+    }
+    &:hover {
+      > a:first-child {
+        color: $g-brand-color;
+        + .g-dropdown {
+          opacity: 1;
+          visibility: visible;
+          top: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+.g-dropdown {
+  background: $g-white none repeat scroll 0 0;
+  box-shadow: 0 1px 2px rgba(86, 86, 90, 0.5);
+  padding: 20px;
+  position: absolute;
+  text-align: left;
+  top: 120%;
+  transform-origin: 0 0 0;
+  transition: all 0.3s ease 0s;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  left: 0;
+  > li {
+    display: block;
+    list-style: none;
+
+    > a {
+      font-size: 13px;
+      display: block;
+      padding: 7px 0;
+    }
+  }
+}
+
+/* Dropdown with 3 columns */
+
+.g-nav {
+    > li {
+      &:hover {
+        > a {
+          + .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            top: 100%;
+          }
+        }
+      }
+      // List item which has `mega-position` class
+      &.mega-position {
+        position: inherit; //  inherit position is static
+      }
+    }
+}
+
+.mega-menu {
+  background: $g-white none repeat scroll 0 0;
+  border: 1px solid #ececec;
+  box-shadow: 0 1px 2px rgba(86, 86, 90, 0.5);
+  left: 0;
+  padding: 20px 30px;
+  position: absolute;
+  text-align: left;
+  top: 120%;
+  transform-origin: 0 0 0;
+  transition: all 0.3s ease 0s;
+  width: 100%;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+}
+
+// div
+.mega-menu.mega-3-colm {
+  ul {
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 33.33%;
+
+    > li {
+      display: block;
+      list-style: none;
+      > a {
+        font-size: 13px;
+        display: block;
+        padding: 7px 0;
+        transition: all 0.3s ease-out 0s;
+        &:hover {
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+}
+
+// li
+.menu-title {
+  font-size: 14px;
+  position: relative;
+  font-weight: 600;
+  margin: 0 0 3px;
+  padding: 5px 0;
+  color: $g-brand-secondary-color;
+}
+

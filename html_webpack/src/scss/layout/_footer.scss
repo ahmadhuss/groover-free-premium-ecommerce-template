@@ -1,0 +1,114 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+/* #{$h-1} */
+.outer-footer-wrapper {
+  text-align: center;
+  h6 {
+    color: $g-text-color;
+  }
+  h1 {
+    font-weight: 600;
+  }
+}
+
+.newsletter-form {
+  position: relative;
+  margin: 0 auto;// Horizontal Center Because Fixed Width
+  max-width: 580px;
+  overflow: hidden;
+
+  // will only select text fields
+  input[type=text] {
+    display: block;
+    width: 100%;
+    height: 60px;
+    // Top , Right , Bottom , Left
+    padding: 0 175px 0 20px;
+    font-size: 13px; // Size of the inner text
+    color: $g-text-color;
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 2px solid $g-brand-secondary-color;
+    &:focus {
+      outline: 0;
+    }
+
+  }
+  .button {
+    height: 59px;
+    padding: 0 60px;
+    font-weight: 700;
+    position: absolute;// Relative to Form Component We Add it On A TextField
+    right: 0;
+    text-transform: uppercase;
+    top: 50%;
+    border-left: 2px solid $g-brand-secondary-color;
+    background-color: transparent;
+    transform: translateY(-50%);
+  }
+}
+
+
+/* #{$h-2} */
+.mid-footer-wrapper {
+  border-bottom: 1px solid $g-border-color;
+}
+.footer-list {
+  h6 {
+    font-weight: 600;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 13px;
+    > li {
+      > a {
+        font-size: 13px;
+        color: $g-text-color;
+        &:hover {
+          color: $g-brand-color;
+        }
+      }
+    }
+  }
+}
+
+
+
+/* #{$h-3} */
+.bottom-footer-wrapper {
+  text-align: center;
+  padding: 40px 0;
+  .copyright-text {
+    color: $g-brand-secondary-color;
+    font-size: 13px;
+    margin: 0;
+    a {
+      color: $g-brand-color;
+      &:hover {
+        color: $g-brand-color;
+      }
+    }
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 23px;
+    margin-bottom: 14px;
+    background: url(../images/payment/pay-3.png) center center no-repeat;
+  }
+}
+
+.social-media-wrapper {
+  margin-bottom: 6px;
+}
+
+
+
+
+

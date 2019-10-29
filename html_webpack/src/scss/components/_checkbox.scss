@@ -1,0 +1,67 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the checkbox component.
+// -----------------------------------------------------------------------------
+/* Checkbox Component */
+.check-box {
+  display: none;
+  + .label-text {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    font-size: 14px;
+    color: $g-brand-secondary-color;
+    margin: 0;
+    padding-left: 25px;
+    // For Not Checked
+    &:after {
+      // Empty Box
+      content: '';
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 15px;
+      height: 15px;
+      border: 1px solid $g-border-color;
+    }
+
+  }
+}
+
+.check-box:checked {
+  + .label-text {
+    color: $g-brand-color;
+    // For Checked
+    &:before {
+      // Box
+      font-family: 'Font Awesome 5 Free';
+      content: '\f00c';// only tick icon
+      display: inline-block;
+      position: absolute;
+      font-weight: 900;
+      z-index: 2;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 15px;
+      height: 15px;
+      text-align: center;
+      font-size: 10px;
+      padding: 0;
+      color: $g-white;
+    }
+    // Set Background Color
+    &:after {
+      background-color: $g-brand-color;
+     border: none;
+    }
+  }
+}
+
+
+.check-box:checked {
+  + .no-color {
+    color: $g-brand-secondary-color;
+  }
+}

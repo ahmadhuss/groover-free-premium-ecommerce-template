@@ -1,0 +1,267 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the product component.
+// -----------------------------------------------------------------------------
+
+/* Product component */
+.item {
+  background-color: $g-white;
+  border: 1px solid $g-border-color;
+  position: relative;
+  margin: 0 10px 30px;
+  overflow: hidden;
+}
+// `div.image-container` children
+  .image-container {
+    position: relative;
+  }
+  // 1
+    .item-img-wrapper-link {
+      display: block;
+      position: relative;
+      &:before {
+        display: block;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        opacity: 0;
+        transition: all 0.3s;
+      }
+  }
+
+// 2
+    .item-action-behaviors {
+      position: absolute;
+      top: 0;
+      left: 20px;
+      opacity: 0;
+      z-index: 3;
+      overflow: hidden;
+      transition: all 0.8s ease;
+    }
+
+      .item-quick-look, .item-mail, .item-addwishlist, .item-addCart {
+        transition: all 0.5s ease;// This transition is only for buttons background-color
+        transform: translateX(-40px);
+        font-family: 'Ionicons';
+        font-size: 0;
+        margin: 10px 0;
+        padding: 0;
+        width: 35px;
+        height: 35px;
+        line-height: 35px; // Vertical centering
+        text-align: center;
+        color: $g-brand-secondary-color;
+        display: block;
+        border-radius: 50%;
+        background-color: $g-white;
+        &:before {
+          font-size: 17px;
+        }
+        &:hover {
+          color: $g-white;
+          background-color: $g-brand-color;
+        }
+      }
+
+      .item-quick-look {
+        &:before {
+          content: '\f4a5';
+        }
+      }
+      .item-mail {
+        &:before {
+          content: '\f322';
+        }
+      }
+      .item-addwishlist {
+        &:before {
+          content: '\f308';
+        }
+      }
+      .item-addCart {
+        &:before {
+          content: '\f273';
+        }
+      }
+
+// `div.image-container` end
+
+// `div.item-content` children
+  .item-content {
+    padding: 15px;
+  }
+    .what-product-is {
+      margin-bottom: 18px;
+      border-bottom: 1px solid $g-border-color;
+    }
+
+    .item {
+      .bread-crumb {
+        > li {
+          font-size: 11px;
+          > a {
+              color: $g-text-color;
+            &:hover {
+              color: $g-brand-color;
+            }
+          }
+        }
+      }
+    }
+
+      .item-title {
+        word-wrap: break-word;
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 700;
+      }
+      // All Margin-bottom
+      .item-category, .item-title {
+        margin-bottom: 5px;
+      }
+
+      .item-stars {
+        font-size: 12px;
+        margin-bottom: 8px;
+      }
+
+
+    .price-template {
+      font-weight: 600;
+      // ClearFix Hack
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+    }
+
+      .item-new-price,.item-old-price {
+        font-size: 17px;
+      }
+
+      .item-new-price {
+        float: left;
+        color: $g-brand-color;
+      }
+      .item-old-price {
+        float: right;
+        color: $g-text-color;
+        text-decoration: line-through;
+      }
+// `div.item-content` end
+
+// Hover
+// specificity 2 .item:hover {}
+  .item:hover {
+      .item-img-wrapper-link {
+        &:before {
+          opacity: 1;
+        }
+      }
+  }
+
+
+.item:hover {
+  .item-action-behaviors {
+    opacity: 1;
+  }
+}
+.item:hover {
+  a.item-quick-look, a.item-mail, a.item-addwishlist, a.item-addCart {
+    transform: translateX(0);
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Medium devices (tablets, less than and equal to 991px) */
+@media (max-width: 991px) {
+
+      .item-img-wrapper-link {
+        &:before {
+          opacity: 1;
+          top: auto;
+          height: 70px;// 35 * 2 = 70px
+        }
+      }
+
+      .item-action-behaviors {
+        opacity: 1;
+        top: auto;
+        bottom: 10px;// Equal to margin which is 10px vertical center
+        right: 0;
+        left: 0;
+        text-align: center; // Horizontal Center
+      }
+
+  .item-quick-look, .item-mail, .item-addwishlist, .item-addCart {
+    transform: translateX(0);
+    display: inline-block;
+
+  }
+
+
+}
+
+/* Product-Tags */
+.tag {
+  position: absolute;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  text-transform: uppercase;
+  top: 20px;
+  right: 10px;
+  z-index: 1;
+  border-radius: 50px;
+  color: $g-white;
+  text-align: center;
+  span {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+// sale tag
+.tag.sale {
+  background:#23D160;
+  color: $g-white;
+}
+
+// discount tag
+.tag.discount {
+  background: #FFDD57;
+  color: #363636;
+}
+
+// new tag different
+.tag.new {
+  background:#FF3860;
+  color: #fff;
+}
+
+// hot tag different
+.tag.hot {
+  background: #FF5722;
+  color: $g-white;
+}
+// For Multiple Tags We need to add positioning classes
+.tag.tag-bottom {
+  top: 70px;
+}

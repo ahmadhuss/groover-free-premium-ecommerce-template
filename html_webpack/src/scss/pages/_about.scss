@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the about page.
+// -----------------------------------------------------------------------------
+/*--------------------------------------------------------------
+#{$j}
+--------------------------------------------------------------*/
+.about-me-info {
+  h1 {
+    position: relative;
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 16px;
+    span {
+      position: relative;
+      font-weight: 700;
+      display:inline-block;
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        border-bottom: 2px solid $g-brand-color;
+        width: 100%;
+        bottom: 0;
+      }
+    }
+  }
+
+  p {
+    font-size: 13px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+}
+
+
+.about-me-image {
+  text-align: center;
+
+  .banner-hover {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,15 @@
+// -----------------------------------------------------------------------------
+// This file contains all jquery-u-range-slider override styles.
+// -----------------------------------------------------------------------------
+
+.ui-slider {
+	border: 1px solid $g-border-color;
+}
+
+.ui-slider .ui-slider-handle {
+	background-color: $g-white;
+}
+
+.ui-slider .ui-slider-range {
+	background-color: $g-brand-color;
+}

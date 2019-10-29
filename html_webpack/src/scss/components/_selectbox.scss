@@ -1,0 +1,46 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Radio Selectbox component.
+// -----------------------------------------------------------------------------
+
+/* Selectbox component */
+.select-box-wrapper {
+  display: inline-block;
+  position: relative;
+
+  &:after {
+    color: #9e9e9e;
+    content: '\f078';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;// solid
+    font-size: 8px;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  // Not Work in IE 9
+  .select-box {
+    background-color: transparent;
+    border: 1px solid #eceff8;
+    color: #333333;
+    font: 13px $g-text-font-stack;
+    height: 45px;
+    padding: 6px 28px 6px 12px;
+    text-align: left;
+    transition: all .3s;
+    &::-ms-expand {
+      opacity: 0;
+    }
+    &:focus {
+      outline: 0;
+      border-color: $g-brand-secondary-color;
+    }
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; // Removes default arrow from IE10+
+
+  }
+}
+
+

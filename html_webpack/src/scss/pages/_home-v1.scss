@@ -1,0 +1,115 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+/*--------------------------------------------------------------
+#{$i}
+--------------------------------------------------------------*/
+/* #{$i-1} */
+#newsletter-modal {
+  .modal-content {
+    border:0;
+  }
+}
+.newsletter-wrapper {
+  text-align: center;
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    span {
+      color: $g-brand-color;
+    }
+  }
+
+  h5 {
+    font-size:15px;
+    color: $g-text-color;
+    margin-bottom: 16px;
+  }
+
+  h6 {
+    font-size:14px;
+    color: $g-text-color;
+    margin-bottom: 16px;
+  }
+
+}
+
+.newsletter-textfield {
+  color: #333333;
+  border: 0;
+  font-size: 14px;
+  border-bottom: 2px solid $g-brand-secondary-color;
+  height: 45px;
+  padding: 0 15px;
+  width: 100%;
+  &:focus {
+    outline: 0;
+  }
+}
+
+/* #{$i-2} */
+.banner-layer {
+  padding: 48px 0;
+}
+
+/* #{$i-3} */
+.product-not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // I found that IE browser has a problem to vertically align inner containers,
+  // when only the `min-height` style is set or when height style is missing at
+  // all, That's why i added height property.
+  height: 445px;
+  min-height: 445px;
+  .not-found {
+    text-align: center;
+    h2 {
+      color: #333;
+      font-size: 110px;
+      font-weight: 700;
+    }
+    h6 {
+      color: #333;
+      font-size: 13px;
+    }
+  }
+}
+
+/* #{$i-4} */
+.brand-slider {
+  .brand-slider-content  {
+    .brand-pic {
+      width: 139px;
+      height: 97px;
+      margin: 0 auto;
+    }
+  }
+}
+
+/* #{$i-5} */
+.app-priority {
+  .priority-wrapper {
+    border-bottom: 1px solid $g-border-color;
+    .single-item-wrapper {
+      text-align: center;
+      .single-item-icon {
+        font-size: 65px;
+        color: $g-brand-secondary-color;
+      }
+      h2 {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 11px;
+      }
+      p {
+        font-size: 12px;
+        color: #929292;
+        letter-spacing: 0.025em;
+        margin: 0;
+      }
+    }
+  }
+}
+

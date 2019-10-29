@@ -1,0 +1,37 @@
+// Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/mixins';
+
+// Header comment section for our `css` file
+@import
+  'header-comment';
+
+// Base stuff
+@import
+  'base/base',
+  'base/typography',
+  'base/pre-config',
+  'base/local-utilities';
+
+
+// Vendor Extensions
+@import
+'vendors-extensions/all';
+
+// Components
+@import
+'components/all';
+
+// Layout-related sections
+@import
+  'layout/header',
+  'layout/footer';
+
+// Page-specific styles
+@import
+  'pages/all';
+
+// Responsive styles
+@import
+'responsive';

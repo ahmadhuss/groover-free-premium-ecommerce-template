@@ -1,0 +1,18 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Textarea component.
+// -----------------------------------------------------------------------------
+
+/* Textarea component */
+.text-area {
+  display: block;
+  width: 100%;
+  border: 1px solid #eceff8;
+  color: #333333;
+  font-size: 14px;
+  padding: 15px;
+  transition: all .3s;
+  &:focus {
+    outline: 0;
+    border-color: $g-brand-secondary-color;
+  }
+}

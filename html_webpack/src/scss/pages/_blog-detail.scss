@@ -1,0 +1,201 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the blog-detail page.
+// -----------------------------------------------------------------------------
+/*--------------------------------------------------------------
+#{$r}
+--------------------------------------------------------------*/
+.blog-detail-wrapper {
+  width: 100%;
+  max-width: 800px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.blog-post-detail-heading {
+  font-size: 32px;
+  margin-bottom: 13px;
+}
+
+.post-content {
+  p {
+    color: $g-brand-secondary-color;
+    font-size: 14px;
+    margin-bottom: 25px;
+    line-height: 2.5; // 40px
+
+  }
+
+  a {
+    font-size: 14px;
+    font-weight: 700;
+    color: $g-brand-color;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  blockquote {
+    border-left: 10px solid $g-brand-color;
+    margin: 0 0 25px 0;
+    padding: 10px 20px;
+    > p {
+      margin: 0;
+      font-size: 15px;
+      color: #626262;
+    }
+  }
+
+  img {
+    display: block;
+    margin-bottom: 18px;
+  }
+}
+
+.post-share-wrapper {
+  text-align: center;
+}
+
+.post-tag {
+  h3 {
+    font-size: 14px;
+    display: inline-block;
+    font-weight: 600;
+    color: $g-brand-secondary-color;
+  }
+}
+
+
+
+
+
+
+.previous-next-wrapper {
+  display: table;
+  width: 100%;
+}
+
+.previous-container, .next-container {
+  display: table-cell;
+  vertical-align: middle;
+  width: 50%;
+  padding: 0 4px;
+  font-size: 13px;
+
+}
+.previous-container {
+  text-align: left;
+}
+
+.next-container {
+  text-align: right;
+}
+
+
+
+.comment-title {
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+  color: $g-brand-secondary-color;
+  &:after {
+    content: ' ';
+    border-bottom: 2px solid $g-brand-color;
+    display: block;
+    width: 12%;
+    position: absolute;
+    bottom: -7px;
+  }
+}
+
+
+.comment-list {
+  margin: 0;
+  padding: 0;
+  > li {
+    list-style: none;
+  }
+}
+
+
+.comment-reply {
+  margin-left: 20px;
+}
+
+.comment-body {
+  display: table;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+
+.comment-author-image {
+  display: table-cell;
+  width: 80px;
+}
+
+.comment-content {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 16px;
+  h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: $g-brand-secondary-color;
+    margin-bottom: 8px;
+    > span {
+      margin: 0 4px;
+      font-size: 13px;
+      font-weight: normal;
+      color: $g-text-color;
+    }
+  }
+
+  h6 {
+    font-size: 13px;
+    color: $g-text-color;
+    margin-bottom: 4px;
+  }
+
+  p {
+    margin-bottom: 4px;
+    font-size: 13px;
+    color: $g-brand-secondary-color;
+  }
+
+  a {
+    font-size: 14px;
+    font-weight: 700;
+    color: $g-brand-color;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+.blog-detail-post-comment {
+  > h3 {
+    font-size: 20px;
+    margin-bottom: 11px;
+    font-weight: 700;
+  }
+  > span {
+    font-size: 13px;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .text-area {
+    height: 174px;
+  }
+
+
+  // apply to all label elements inside login accordion content
+  label {
+    font-weight: 600;
+    font-size: 14px;
+    color: $g-brand-secondary-color;
+  }
+}
+
+

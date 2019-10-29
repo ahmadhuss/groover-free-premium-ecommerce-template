@@ -1,0 +1,41 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the terms conditions page.
+// -----------------------------------------------------------------------------
+/*--------------------------------------------------------------
+#{$n}
+--------------------------------------------------------------*/
+.term {
+  h1 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  > p {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+}
+
+.term-list {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style:  none;
+    padding-left: 25px;
+    font-size: 14px;
+    color: $g-text-color;
+    margin-bottom: 35px;
+    position: relative;
+    &:before {
+      content: "\f101";
+      font-family: 'Font Awesome 5 Free';
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 14px;
+      font-weight: 900;// solid
+      color: $g-brand-secondary-color;
+    }
+  }
+}

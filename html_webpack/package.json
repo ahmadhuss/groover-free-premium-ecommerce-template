@@ -1,0 +1,34 @@
+{
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development --progress",
+    "watch": "webpack --mode development --watch --progress",
+    "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "webpack": "^4.12.2",
+    "webpack-command": "^0.3.0"
+  },
+  "devDependencies": {
+    "animate.css": "^3.6.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "bootstrap": "^4.1.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "jquery": "^3.3.1",
+    "jquery-slimscroll": "^1.3.8",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.9.0",
+    "nprogress": "^0.2.0",
+    "owl.carousel": "^2.3.4",
+    "popper.js": "^1.14.3",
+    "sass-loader": "^7.0.3",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "underscore-template-loader": "^1.0.0"
+  }
+}

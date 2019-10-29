@@ -1,0 +1,24 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the continue link component.
+// -----------------------------------------------------------------------------
+/* Continue-Link component */
+
+.continue-link-wrapper {
+  text-align: center;
+  .continue-link {
+    background-color: transparent;
+    border: 1px solid #e1e1e1;
+    border-radius: 50%;
+    line-height: 50px;
+    height: 50px;
+    font-size: 28px;
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+    color: $g-brand-secondary-color;
+    transition: transform .4s ease-in-out;
+    &:hover {
+      transform: rotate(90deg);
+    }
+  }
+}

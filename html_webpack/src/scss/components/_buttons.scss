@@ -1,0 +1,51 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+/* Button Component */
+.button {
+  transition: .3s;
+  border: none;// for coupon, for sorry products not found
+  font-size: 13px;
+  cursor: pointer;
+  padding: 8px 14px;
+  &:focus {
+    outline: 0;
+  }
+}
+// Search Button not radius
+.button-primary {
+  // We cannot apply same color of border with background-color property
+  background: $g-brand-color;
+  font-weight: 700;
+  color: $g-white;
+  &:hover {
+    background: darken($g-brand-color, 2%);
+  }
+}
+
+
+
+
+
+// Normal Buttons has radius
+.button-outline-secondary {
+  background-color: transparent;
+  font-weight: 700;
+  border-radius: 4px;
+  color: $g-brand-secondary-color;
+  border: 2px solid $g-brand-secondary-color;
+}
+
+.button-outline-platinum {
+  background-color: transparent;
+  color: #222;
+  border: 1px solid #e5e5e5;
+  font-weight: 700;
+  &:hover {
+    border-color: #b2b2b2;
+  }
+}
+
+
+
+

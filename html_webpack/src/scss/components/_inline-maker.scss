@@ -1,0 +1,14 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the group-inline component.
+// -----------------------------------------------------------------------------
+
+/* Inline Maker component */
+.group-inline {
+  display: table;
+  width: 100%;
+  > .group-1, .group-2 {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+  }
+}

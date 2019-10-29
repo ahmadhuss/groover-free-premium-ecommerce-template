@@ -1,0 +1,34 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// Global Variables
+
+/// Regular font family
+/// @type List
+$g-text-font-stack: 'Open Sans', sans-serif !default;
+
+/// White color
+/// @type Color
+$g-white: #ffffff !default;
+
+
+/// Black color
+/// @type Color
+$g-black: #000000 !default;
+
+/// Copy text color
+/// @type Color
+$g-text-color: #707070 !default;
+
+/// Main border color
+/// @type Color
+$g-border-color:#DCDCDD !default;
+
+/// Main brand color
+/// @type Color
+$g-brand-color:#d90429 !default;
+
+/// Main brand secondary color
+/// @type Color
+$g-brand-secondary-color: #292929 !default;

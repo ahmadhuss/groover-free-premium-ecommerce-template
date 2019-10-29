@@ -1,0 +1,44 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the quantity component.
+// -----------------------------------------------------------------------------
+
+/* Quantity component */
+
+.quantity {
+  position: relative;
+  display: inline-block;
+  margin-left:4px;
+  margin-right:4px;
+  // input text
+  .quantity-text-field {
+    border: 1px solid #aaaaaa;
+    display: inline-block;
+    padding: 8px 18px;
+    font-size: 12px;
+    text-align: center;
+    width: 98px;
+    height: 36px;
+    transition: all .3s;
+    &:focus {
+      outline: 0;
+      border-color: $g-brand-secondary-color;
+    }
+  }
+}
+
+.minus-a,.plus-a {
+  position: absolute;
+  border: none;
+  font-size: 18px;
+  user-select: none;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.minus-a {
+  left:6px;
+}
+
+.plus-a {
+  right: 6px;
+}

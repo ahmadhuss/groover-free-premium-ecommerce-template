@@ -1,0 +1,107 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Banner Hover effects component.
+// -----------------------------------------------------------------------------
+
+/* Banner-Hover-Effect-component */
+
+/**
+ * Different types of Banner hover effect
+ * Remember effects will only be shown when we hover on banners. First
+ * `.banner-hover` class will have added on 'div or anchor'.
+ */
+
+.banner-hover {
+  position: relative;
+  display: block;// Make Anchor display block
+  cursor: pointer;
+}
+
+/** Effect 1 v1-gray:
+ * Border Scaling from all x y axis
+ */
+.effect-border-scaling-gray {
+  &:before {
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    transform: scale(0, 1);// Y Axis
+  }
+
+  &:after {
+    border-left: 1px solid rgba(255, 255, 255, 0.8);
+    border-right: 1px solid rgba(255, 255, 255, 0.8);
+    transform: scale(1, 0);// X Axis
+  }
+  &:before,&:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    bottom: 15px;
+    right: 15px;
+    z-index: 9;
+  }
+
+  &:hover {
+    &:before,&:after {
+      transform: scale(1);// Both X or Y Axis
+      transition: all 0.3s ease-out 0s;
+    }
+  }
+}
+
+/** Effect 1 v2-black:
+ * Border Scaling from all x y axis
+ */
+.effect-border-scaling-black {
+  &:before {
+    border-top: 1px solid rgba(52, 58, 64, 0.5);
+    border-bottom: 1px solid rgba(52, 58, 64, 0.5);
+    transform: scale(0, 1);// Y Axis
+  }
+
+  &:after {
+    border-left: 1px solid rgba(52, 58, 64, 0.5);
+    border-right: 1px solid rgba(52, 58, 64, 0.5);
+    transform: scale(1, 0);// X Axis
+  }
+  &:before,&:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    bottom: 15px;
+    right: 15px;
+    z-index: 9;
+  }
+
+  &:hover {
+    &:before,&:after {
+      transform: scale(1);// Both X or Y Axis
+      transition: all 0.3s ease-out 0s;
+    }
+  }
+}
+
+/** Effect 2:
+ * Dark Opacity
+ */
+.effect-dark-opacity {
+  &:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: all 0.8s ease-in-out;
+  }
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+// -----------------------------------------------------------------------------
+// This file contains all Bootstrap override styles.
+// -----------------------------------------------------------------------------
+
+/* Modal styles */
+.modal {
+  z-index: 999999;
+}
+
+.modal-dialog {
+  width: 100%;
+  max-width: 980px;
+}
+.modal-content {
+  display: block !important;
+  border-radius: 0;
+}
+
+.modal-backdrop {
+  z-index: 999998;
+}

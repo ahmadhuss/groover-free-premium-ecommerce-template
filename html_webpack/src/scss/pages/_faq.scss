@@ -1,0 +1,37 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the faq page.
+// -----------------------------------------------------------------------------
+/*--------------------------------------------------------------
+#{$l}
+--------------------------------------------------------------*/
+.faq  {
+  h1 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  > p {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+}
+
+
+.f-a-q {
+  background-color: #f8f9fa;
+  padding: 20px;
+
+  > a {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  > div {
+    > p {
+      font-size: 13px;
+      margin: 20px 0;
+    }
+  }
+}

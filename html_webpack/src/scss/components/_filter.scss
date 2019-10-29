@@ -1,0 +1,68 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the filter component.
+// -----------------------------------------------------------------------------
+
+/* Filter component */
+
+/* Apply styles to all filters */
+.facet-filter-associates,.facet-filter-by-price , .facet-filter-by-shipping,.facet-filter-by-rating {
+  margin-bottom: 32px;
+}
+
+/* Color, Size, Brand, Free-Shipping */
+.facet-filter-associates {
+  .associate-wrapper {
+    .check-box + .label-text {
+      display: block;
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+  }
+}
+
+
+/* Price Range Slider */
+// div
+.facet-filter-by-price {
+  // form
+  .facet-form {
+    // div
+    .amount-result {
+      .price-from,.price-to {
+        font-size: 15px;
+        font-weight: bold;
+        color: $g-brand-secondary-color;
+      }
+      .price-from {
+        float: left;
+      }
+      .price-to {
+        float: right;
+      }
+    }
+    // div Range Slider
+    .price-filter {
+      margin: 14px 0;
+    }
+    // button
+    button {
+      width: 100%;
+    }
+  }
+}
+
+/* Rating */
+.facet-filter-by-rating {
+  // div
+  .facet-form {
+      .item-stars {
+        display: inline-block;
+        .star {
+          cursor: pointer;
+        }
+      }
+    .total-fetch-items {
+      margin-left: -2px;
+    }
+  }
+}

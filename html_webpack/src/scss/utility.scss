@@ -1,0 +1,67 @@
+// -----------------------------------------------------------------------------
+// This file contains all global CSS utility classes.
+// -----------------------------------------------------------------------------
+@import
+'abstracts/mixins';
+
+/**
+ * Utility classes for spacing:
+ * A wide range of shorthand margin and padding utility classes to modify an
+ * an element’s appearance.
+ * Prefix understanding: u means utility which is a prefix for root namespace,
+ * s means spacing which is a prefix for sub namespace, m means margin,
+ * p means padding. e.g. `u-s-m-t-22` means apply top margin 22 pixels.
+ */
+@include utility-margin-padding($g-attribute, $g-sides);
+
+/**
+ * Utility classes which contain break points:
+*/
+
+/* Large devices (desktops, less than and equal to 1199px) */
+@media (max-width: 1199px) {
+  /* Display utility class */
+  .u-d-none-xlg {
+    display: none !important;
+  }
+  /* Text utility class */
+  .u-t-center-xlg {
+    text-align: center !important;
+  }
+}
+
+/* Medium devices (tablets, less than and equal to 991px) */
+@media (max-width: 991px) {
+  /* Display utility class */
+  .u-d-none-lg {
+    display: none !important;
+  }
+  /* Text utility class */
+  .u-t-center-lg {
+    text-align: center !important;
+  }
+}
+
+/* Small devices (landscape phones, less than and equal to 767px) */
+@media (max-width: 767px) {
+  /* Display utility class */
+  .u-d-none-md {
+    display: none !important;
+  }
+  /* Text utility class */
+  .u-t-center-md {
+    text-align: center !important;
+  }
+}
+
+/* Extra small devices (portrait phones, less than and equal to 575px) */
+@media (max-width: 575px) {
+  /* Display utility class */
+  .u-d-none-sm {
+    display: none !important;
+  }
+  /* Text utility class */
+  .u-t-center-sm {
+    text-align: center !important;
+  }
+}

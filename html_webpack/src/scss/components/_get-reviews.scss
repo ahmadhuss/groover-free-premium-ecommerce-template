@@ -1,0 +1,115 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the get-reviews component.
+// -----------------------------------------------------------------------------
+
+/* Get-reviews component */
+
+.get-reviews {
+  .review-options {
+    display: table;
+    width: 100%;
+    > .review-option-heading, .review-option-box {
+      display: table-cell;
+      width: 50%;
+      vertical-align: middle;
+    }
+    > .review-option-heading {
+      text-align: left;
+      h6 {
+        margin-bottom: 0;
+        font-size: 13px;
+        font-weight: bold;
+      }
+    }
+    > .review-option-box {
+      text-align: right;
+      .select-box-wrapper {
+        .select-box {
+          height: 35px;
+        }
+      }
+    } // end review option box
+  } // end review options
+}
+
+
+// All reviews by different persons
+.review-data {
+  display: table;
+  border-top: 1px solid $g-border-color;
+  padding: 8px 0;
+  width: 100%;
+
+  .reviewer-name-and-date,.reviewer-stars-title-body {
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+  }
+
+  .reviewer-name-and-date {
+
+    .reviewer-name {
+      margin-bottom: 4px;
+    }
+
+    .review-posted-date {
+      font-size: 12px;
+      margin-bottom: 0;
+      color: $g-text-color;
+    }
+  }
+
+
+  .reviewer-stars-title-body {
+    .reviewer-stars {
+      > .review-title {
+        font-size: 14px;
+        margin-left: 4px;
+        vertical-align: middle;
+        color: $g-brand-secondary-color;
+        font-weight: bold;
+      }
+    }
+    .review-body {
+      font-size: 14px;
+      margin: 6px 0;
+    }
+  }
+}
+
+// Pagination Reviews
+.pagination-review-area {
+  padding: 18px 0;
+  width: 100%;
+  text-align: center;
+  //div
+  .pagination-review-number {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      > li {
+        display: inline-block;
+        > a {
+          font-size: 10px;
+          color: #626262;
+          border: 1px solid transparent;
+          font-weight: 600;
+          padding: 5px 9px;
+          margin-right: 1px;
+          display: inline-block;
+          &:hover {
+            border-color: #eceff8;
+          }
+        }
+      }
+
+
+      > li.active {
+        > a {
+          border-color: #eceff8;
+        }
+      }
+    }
+  }
+}

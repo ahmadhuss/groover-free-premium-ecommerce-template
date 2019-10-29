@@ -1,0 +1,178 @@
+// -----------------------------------------------------------------------------
+// This file contains some pre configure styles.
+// What should we do when the app is open on non-compatible browser?
+// What should we do when user disable JavaScript?
+// Does Flash of Un-styled Content (FOUC) is occurring on your app?
+// Does app should have a pre-loader component to prevent (FOUC)?
+// -----------------------------------------------------------------------------
+
+/*--------------------------------------------------------------
+#{$c}
+--------------------------------------------------------------*/
+
+/**
+* Vertical Align Centering
+*/
+.vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+/* Compatible-browser and Javascript Disability */
+.app-issue {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: $g-white;// Important property
+  z-index: 1000001;
+
+  .text-center {
+    h1 {
+      font-size: 46px;
+     font-weight: 700;
+    }
+
+    span {
+    font-size: 13px;
+    font-weight: 400;
+    }
+  }
+}
+
+
+/* When pre-loader is viewed, We need to hide the browser scrollbar */
+.has-overflow {
+  overflow: hidden;
+}
+/* Page introduction styles */
+[class*="page-style-"] {
+  position: relative;
+  z-index: 1;
+  color: $g-white;
+  padding: 68px 0;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .7;
+    z-index: -1;
+  }
+
+  .page-intro {
+    text-align: center;
+    >  h2 {
+      color: $g-white;
+      font-size: 36px;
+      font-weight: 500;
+      margin: 0 0 20px;
+      text-transform: capitalize;
+    }
+    > .bread-crumb {
+      > li {
+        > a {
+          color: $g-white;
+        }
+        &.is-marked {
+          > a {
+            color: $g-brand-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Page introduction style a */
+.page-style-a {
+  background: url(../images/pattern/pattern-a.png) repeat center center;
+  &:after {
+    background: rgba(52, 58, 64, 0.5);
+  }
+}
+
+/* Page introduction style b */
+.page-style-b {
+  background: url(../images/pattern/pattern-b.png) repeat center center;
+  &:after {
+    background: $g-black;
+  }
+}
+
+/* Page introduction style c */
+.page-style-c {
+  &:after {
+    background: $g-black;
+  }
+}
+
+
+
+
+/**
+ * Asterisk "*" after the field label, If the field is required.
+ */
+.astk {
+  color: #f00;
+  margin-left: 4px;
+}
+
+/**
+ * Social Media List
+ */
+.social-media-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+  > li {
+    margin: 0 7px;
+    display: inline-block;
+    > a {
+      font-size: 12px;
+      color: $g-brand-secondary-color;
+      &:hover {
+        color: $g-brand-color;
+      }
+    }
+  }
+}
+
+
+
+
+/**
+ * Special-Link
+ */
+.redirect-link-wrapper {
+  .redirect-link {
+    //  text-transform: uppercase;
+    background-color: transparent;
+    color: #292929;
+    font-size: 12px;
+    display: inline-block;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      margin-top: 5px;
+      transition: all .8s ease-in;
+      border: 1px solid $g-border-color;
+    }
+
+    &:hover {
+      &:after {
+        border-color: $g-brand-color;
+      }
+    }
+  }
+}
+
+
+
+

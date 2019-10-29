@@ -1,0 +1,25 @@
+// -----------------------------------------------------------------------------
+// This file contains all JqueryScrollUp override styles.
+// -----------------------------------------------------------------------------
+
+/* ScrollUp Custom */
+#topScroll {
+  right: 24px;
+  bottom: 14px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, .3);
+  color: $g-white;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* Medium devices (tablets, less than and equal to 991px) */
+@media (max-width: 991px) {
+  /* Top Scroll Button */
+  #topScroll {
+    bottom: 136px;
+  }
+}

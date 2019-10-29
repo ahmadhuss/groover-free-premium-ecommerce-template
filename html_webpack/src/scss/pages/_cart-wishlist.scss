@@ -1,0 +1,199 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the Cart-&-Wishlist page.
+// -----------------------------------------------------------------------------
+/*--------------------------------------------------------------
+#{$s}
+--------------------------------------------------------------*/
+/* Products-List-Wrapper */
+.table-wrapper,.table-wrapper-2 {
+  overflow-x: auto;
+  min-height: 0.01%;
+  > table {
+    width: 100%;
+    // thead > tr > th
+    th {
+      font-size: 14px;
+      vertical-align: bottom;
+      padding: 12px;
+      color: $g-brand-secondary-color;
+    }
+
+    // tbody > tr > td
+    tbody {
+      tr {
+        border-top: 1px solid $g-border-color;
+        td {
+          padding: 12px;
+          vertical-align: middle;
+        }
+        &:last-child {
+          border-bottom: 1px solid $g-border-color;
+        }
+      }
+    }
+  }
+}
+
+.cart-anchor-image {
+  > a {
+    display: inline-block;
+    > img {
+      width: 50px;
+      height: 50px;
+      margin-right:6px;
+      display: inline-block;
+    }
+
+    > h6 {
+      display: inline-block;
+      margin: 0;
+      font-size: 13px;
+    }
+  }
+}
+
+.cart-price {
+  color: $g-brand-secondary-color;
+  font-weight:600;
+  font-size: 14px;
+}
+
+.cart-stock {
+  font-size: 13px;
+}
+
+.cart-quantity {
+  .quantity-text-field {
+    border: 1px solid #eceff8;
+  }
+}
+
+.action-wrapper {
+  display: inline-block;
+
+  button {
+  &:before {
+    transform: rotate(0deg);
+    transition: .3s;
+    display: block;
+  }
+
+  &:hover {
+    &:before {
+      transform: rotate(360deg);
+    }
+  }
+  }
+
+  .fa-trash {
+    margin-left: 6px;
+  }
+
+}
+
+
+/* Coupon */
+.coupon-continue-checkout {
+  display: table;
+  width: 100%;
+
+  .coupon-area,.button-area {
+    display: table-cell;
+    vertical-align: bottom;
+    width: 50%;
+  }
+
+  .coupon-area {
+    > h6 {
+      font-size: 13px;
+    }
+  }
+
+
+  .button-area {
+    text-align: right;
+    .continue,.checkout {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px 14px;
+    }
+
+    .continue {
+      border-radius: 4px;
+      color: $g-brand-secondary-color;
+      border: 2px solid $g-brand-secondary-color;
+    }
+    .checkout {
+      margin-left: 6px;
+      transition: all .4s;
+      background: $g-brand-color;
+      color: $g-white;
+      &:hover {
+        background: darken($g-brand-color, 2%);
+      }
+    }
+  }
+}
+/* Cart-Empty-Styles & Wishlist Page */
+.page-cart,.page-wishlist {
+  .vertical-center {
+    h1 {
+      font-size: 116px;
+      color: #333;
+      margin-bottom: 22px;
+    }
+    h5 {
+      font-size: 13px;
+      color: #333;
+    }
+  }
+}
+
+/* Billing */
+.table-wrapper-2 {
+  > table {
+    tbody {
+      tr {
+        td:last-child {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+.calculation {
+  max-width: 500px;
+  margin-left: auto;
+
+  .calc-h3 {
+    font-size: 14px;
+    font-weight: bold;
+    color: $g-brand-secondary-color;
+  }
+
+  .calc-text {
+    font-size: 14px;
+  }
+
+  .calc-choice-text {
+    font-size: 13px;
+    color: $g-text-color;
+  }
+
+  .calc-anchor {
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-block;
+    text-decoration: underline;
+  }
+
+  #tax-heading {
+    display: inline-block;
+    + span {
+      font-size: 11px;
+      margin-left: 6px;
+    }
+  }
+}

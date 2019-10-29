@@ -1,0 +1,31 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the form coupon textbox component.
+// -----------------------------------------------------------------------------
+
+/* Form coupon textbox component */
+.coupon-field {
+  position: relative;
+  overflow: hidden;
+
+  .text-field {
+    // Top , Right , Bottom , Left
+    padding: 0 125px 0 20px;
+    &:focus + button {
+      border-left-color: $g-brand-secondary-color;
+      color: $g-brand-secondary-color;
+    }
+  }
+
+  button {
+    position: absolute;// Relative to form component
+    right: 0;
+    height: 45px;
+    color: $g-text-color;
+    border-left: 1px solid #eceff8;
+    top: 50%;
+    // border-left: 2px solid $secondry-color;
+    background-color: transparent;
+    transform: translateY(-50%);
+  }
+
+}

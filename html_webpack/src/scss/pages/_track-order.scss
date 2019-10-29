@@ -1,0 +1,30 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the track-order page.
+// -----------------------------------------------------------------------------
+/*--------------------------------------------------------------
+#{$v}
+--------------------------------------------------------------*/
+.page-track-order {
+  .track-order-wrapper {
+    max-width: 430px;
+    margin: 0 auto;
+  }
+  .track-order-h2 {
+    font-size: 35px;
+  }
+
+  .track-order-h6 {
+    font-size: 13px;
+    color: $g-text-color;
+  }
+
+  label {
+    font-weight: 600;
+    font-size: 14px;
+    color: $g-brand-secondary-color;
+  }
+  .label-text {
+    font-size: 13px;
+    font-weight: normal;
+  }
+}

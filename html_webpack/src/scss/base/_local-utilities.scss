@@ -1,0 +1,15 @@
+// -----------------------------------------------------------------------------
+// This file contains all local CSS utility classes that are specific only for layout
+// design.
+// -----------------------------------------------------------------------------
+/*--------------------------------------------------------------
+#{$d}
+--------------------------------------------------------------*/
+/**
+ * Utility classes for colors:
+ * Convey meaning through color with a handful of color utility classes.
+ * Includes support for styling links too.
+ */
+.u-c-brand {
+  color:$g-brand-color !important;
+}

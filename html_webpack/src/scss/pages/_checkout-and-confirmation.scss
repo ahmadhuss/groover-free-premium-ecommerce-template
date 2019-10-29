@@ -1,0 +1,210 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the checkout page.
+// -----------------------------------------------------------------------------
+/*--------------------------------------------------------------
+#{$t}
+--------------------------------------------------------------*/
+.message-open {
+  background-color: #f5f5f5;
+  padding: 13px;
+  font-size: 13px;
+  border-top: 2px solid rgba(52, 58, 64, 0.5);
+}
+
+
+// GLOBAL STYLES
+.page-checkout {
+  // h6 heading inside accordion
+  .collapse-h6 {
+    font-size: 13px;
+  }
+
+  // apply to all label elements inside login accordion content
+  label {
+    font-weight: 600;
+    font-size: 14px;
+    color: $g-brand-secondary-color;
+  }
+
+  // Check box text
+  .label-text {
+    font-size: 13px;
+    font-weight: normal;
+  }
+
+  // All option-boxes
+  .select-box-wrapper {
+    width: 100%;
+    > .select-box {
+      width: 100%;
+    }
+  }
+
+
+
+  // Page specific anchor
+  .page-anchor {
+    > a {
+      font-size: 13px;
+      display: inline-block;
+    }
+  }
+
+  .section-h4 {
+    border-bottom: 1px solid $g-border-color;
+    padding-bottom: 14px;
+    margin-bottom: 26px;
+    position: relative;
+    &:after {
+      content: ' ';
+      border-bottom: 2px solid $g-brand-color;
+      display: block;
+      width: 30%;
+      position: absolute;
+      bottom: -1px;
+    }
+  }
+
+}
+
+
+// First accordion
+#showlogin {
+  // Apply to all buttons inside this accordion
+  button {
+    margin-right:10px;
+  }
+}
+// Second accordion
+#showcoupon {
+  .coupon-field {
+    width: 50%;
+  }
+}
+
+
+// BILLING DETAILS
+// street address
+.street-address {
+  > input {
+    margin-bottom: 15px;
+  }
+}
+// BILLING DETAILS End
+
+// Place Order
+.order-table {
+  border: 1px solid #e5e5e5;
+  padding: 35px 20px;
+  overflow-x: auto;
+  min-height: 0.01%;
+
+  > table {
+    width: 100%;
+    // thead > tr > th
+    th {
+      font-size: 14px;
+      vertical-align: bottom;
+      padding: 12px;
+      color: $g-brand-secondary-color;
+      &:last-child {
+        text-align: right;
+      }
+    }
+
+    // tbody > tr > td
+    tbody {
+      tr {
+        border-top: 1px solid $g-border-color;
+        td {
+          padding: 12px;
+          vertical-align: middle;
+          &:last-child {
+            text-align: right;
+          }
+        }
+        &:last-child {
+          border-bottom: 1px solid $g-border-color;
+        }
+      }
+    }
+  }
+
+
+
+  .order-h3 {
+    font-size: 14px;
+    font-weight:bold;
+    color: $g-brand-secondary-color;
+    margin: 0;
+  }
+
+  .order-h6 {
+    display: inline-block;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .order-span-quantity {
+    font-weight:bold;
+    color: $g-brand-secondary-color;
+    font-size: 13px;
+  }
+
+  .label-text {
+    font-size: 14px;
+    &.no-color {
+      color: $g-brand-secondary-color;
+      font-weight: bold;
+    }
+  }
+
+  button {
+    width: 100%;
+  }
+}
+// Place Order End
+
+
+/* Checkout-Confirmation */
+.page-checkout-confirm {
+  border-top: 1px solid $g-border-color;
+
+  .vertical-center {
+    h1 {
+      font-size: 80px;
+      color: $g-brand-color;
+      margin-bottom: 20px;
+    }
+    h5 {
+      font-size: 13px;
+      margin-bottom: 35px;
+      button {
+        padding: 4px;
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+        transition: .8s;
+        border-bottom: 1px solid $g-brand-secondary-color;
+        &:hover {
+         color: $g-brand-color;
+          border-color: $g-brand-color;
+        }
+        &:focus {
+          outline: 0;
+        }
+      }
+    }
+
+    .thank-you-back {
+      font-size: 13px;
+      cursor: pointer;
+      padding: 8px 14px;
+      font-weight: 700;
+      border-radius: 4px;
+      color: $g-brand-secondary-color;
+      border: 2px solid $g-brand-secondary-color;
+    }
+  }
+}
+

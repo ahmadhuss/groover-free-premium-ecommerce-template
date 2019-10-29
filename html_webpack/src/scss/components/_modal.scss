@@ -1,0 +1,18 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the modal component.
+// -----------------------------------------------------------------------------
+
+/* Modal component */
+.dismiss-button {
+  position: absolute;
+  padding: 0;
+  z-index: 2;
+  background-color: transparent;
+  color: $g-brand-secondary-color;
+  font-size: 27px;
+  top: 0;
+  right: 16px;
+  &:hover {
+    color: $g-brand-color;
+  }
+}

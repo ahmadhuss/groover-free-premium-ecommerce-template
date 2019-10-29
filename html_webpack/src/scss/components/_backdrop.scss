@@ -1,0 +1,19 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the backdrop component.
+// -----------------------------------------------------------------------------
+
+/* Backdrop-component */
+
+/**
+ * Our document contains an element at the end that will work as a backdrop.
+ */
+.body-backdrop {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999997;
+}

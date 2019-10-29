@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the RadioBox component.
+// -----------------------------------------------------------------------------
+
+/* RadioBox component */
+.radio-box {
+  display: none;
+  + .label-text {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    font-size: 14px;
+    color: $g-brand-secondary-color;
+    margin: 0;
+    padding-left: 25px;
+    // For Not Checked
+    &:after {
+      // Empty Box
+      content: '';
+      position: absolute;
+      z-index: 1;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 15px;
+      height: 15px;
+      border: 1px solid $g-border-color;
+    }
+
+  }
+}
+
+.radio-box:checked {
+  + .label-text {
+    color: $g-brand-color;
+    // Set Background Color
+    &:after {
+      background-color: $g-brand-color;
+      border:none;
+    }
+  }
+}

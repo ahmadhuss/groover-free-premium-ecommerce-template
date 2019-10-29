@@ -1,0 +1,61 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the contact page.
+// -----------------------------------------------------------------------------
+/*--------------------------------------------------------------
+#{$k}
+--------------------------------------------------------------*/
+.contact-h1 {
+  border-bottom: 1px solid $g-border-color;
+  color: $g-brand-secondary-color;
+  font-size: 22px;
+  padding-bottom: 14px;
+  margin-bottom: 26px;
+  position: relative;
+  &:after {
+    content: ' ';
+    border-bottom: 2px solid $g-brand-color;
+    display: block;
+    width: 14%;
+    position: absolute;
+    bottom: -1px;
+  }
+}
+
+.touch-wrapper {
+  form {
+    label {
+      font-weight: 600;
+      font-size: 14px;
+      color: $g-brand-secondary-color;
+    }
+
+    textarea {
+      height: 175px;
+    }
+  }
+}
+
+
+.information-about-wrapper {
+  p {
+    font-size: 13px;
+    margin-bottom: 30px;
+  }
+}
+
+.contact-material {
+  h6 {
+    color: $g-text-color;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  span {
+    display: block;
+    font-size: 13px;
+  }
+}
+
+#map {
+  height: 375px;
+}

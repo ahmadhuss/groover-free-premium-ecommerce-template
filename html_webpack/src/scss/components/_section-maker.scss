@@ -1,0 +1,314 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the section-maker component.
+// -----------------------------------------------------------------------------
+
+/* Section-Maker component */
+
+/* Sub-component-1 */
+.sec-maker-header {
+  border-bottom: 1px solid $g-border-color;
+  margin-bottom: 25px;
+  padding: 10px 0;
+}
+
+/* Sub-component-2 */
+.sec-maker-h3 {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: $g-brand-secondary-color;
+}
+
+/* Sub-component-3 */
+.sec-maker-span-text {
+  font-size: 13px;
+}
+
+/* Sub-component-4 */
+[class*="tab-nav-style-1-"] {
+  > .nav-item {
+    position: relative;
+    margin-bottom: 15px;
+    & + .nav-item {
+      margin-left: 8px;
+    }
+  }
+}
+
+/* Sub-component-4 v1 */
+.tab-nav-style-1-a {
+  > .nav-item {
+    // li:hover
+    &:hover {
+      > .nav-link {
+        color: $g-brand-color;
+        &:after {
+          transform: scale(1);
+        }
+      }
+    }
+
+    > .nav-link {
+      border-bottom: 3px solid transparent;
+      font-size: 13px;
+      color: #727272;
+      &:after {
+        content: "";
+        background-color: $g-brand-color;
+        height: 3px;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        transition: all 250ms ease 0s;
+        transform: scale(0);
+      }
+
+    }
+
+    > .nav-link.active {
+      border-color: $g-brand-color;
+      color: $g-brand-color;
+
+    }
+  }
+}
+
+/* Sub-component-4 v2 */
+.tab-nav-style-1-b {
+  > .nav-item {
+    > .nav-link {
+      font-size: 13px;
+      background-color: transparent;
+      border: 2px solid #f7f7f9;
+      color: #727272;
+      &:hover {
+        border-color: $g-brand-color;
+        color: #272B34;
+      }
+    }
+    > .nav-link.active {
+      border-color: $g-brand-color;
+      color: #272B34;
+
+    }
+  }
+}
+
+/* Sub-component-4 v3 */
+.tab-nav-style-1-c {
+  > .nav-item {
+    > .nav-link {
+      position: relative;
+      font-size: 13px;
+      color: #727272;
+      &:after {
+        background-color: $g-brand-color;
+        bottom: 0;
+        content: "";
+        height: 2px;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        transition: all .3s linear;
+        width: 100%;
+      }
+    }
+
+    > .nav-link.active {
+      color: $g-brand-color;
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+/* Sub-component-4 v4 */
+.tab-nav-style-1-d {
+  > .nav-item {
+    font-size: 13px;
+    border: 1px solid $g-border-color;
+    > .nav-link {
+      color: rgba(108, 117, 125, 0.79);
+      &:hover {
+        color: rgba(108, 117, 125, 0.79);
+      }
+    }
+    > .nav-link.active {
+      background-color: $g-brand-color;
+      color: $g-white;
+      border-color: transparent;
+    }
+  }
+}
+
+/* Sub-component-5 */
+.section-timing-wrapper {
+  display: flex;
+  // Flexbox Horizontal centering width is necessary
+  width: 100%;
+  justify-content: center;
+  .section-box-wrapper {
+    display: table;
+    text-align: center;
+    margin-right: 4px;
+    .section-box {
+      color: $g-brand-secondary-color;
+      display: table-cell; // Very Important Property
+      height: 44px;
+      vertical-align: middle;
+      width: 45px;
+      line-height: 15px;
+      .section-key {
+        display: block;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+      .section-value {
+        display: block;
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+}
+
+
+
+/* Sub-component-6 */
+[class*="tab-nav-style-2-"] {
+  > .nav-item {
+    width: 100%;
+    text-align: center;
+    > .nav-link {
+      font-size: 26px;
+    }
+  }
+}
+
+/* Sub-component-6 v1 */
+.tab-nav-style-2-a {
+  border-left: 1px solid rgba(222, 226, 230, 0.66);
+  > .nav-item {
+    > .nav-link {
+      color: $g-text-color;
+      position: relative;
+      border-left: 3px solid transparent;
+      &:after {
+        content: "";
+        background-color: $g-brand-color;
+        height: 100%;
+        position: absolute;
+        width: 3px;
+        left: -3px;
+        top: 0;
+        transition: all 250ms ease 0s;
+        transform: scale(0);
+      }
+      &.active {
+        color: $g-brand-color;
+        border-color: $g-brand-color;
+      }
+    }
+
+    &:hover {
+      > .nav-link {
+        color: $g-brand-color;
+        &:after {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
+
+/* Sub-component-6 v2 */
+.tab-nav-style-2-b {
+> .nav-item {
+  margin-bottom: 10px;
+  > .nav-link {
+    background-color: transparent;
+    border: 2px solid #f7f7f9;
+    color: #727272;
+    &.active {
+      border-color: $g-brand-color;
+    }
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+}
+/* Sub-component-6 v3 */
+.tab-nav-style-2-c {
+  border-left: 1px solid rgba(222, 226, 230, 0.66);
+  > .nav-item {
+    > .nav-link {
+      transition: all .3s linear;
+      color: $g-text-color;
+      border-left: 3px solid transparent;
+      &.active {
+        color: $g-brand-color;
+        border-color: $g-brand-color;
+      }
+    }
+  }
+}
+
+/* Sub-component-6 v4 */
+.tab-nav-style-2-d {
+  border: 1px solid rgba(222, 226, 230, 0.66);
+  > .nav-item {
+    > .nav-link {
+      color: $g-text-color;
+      border-bottom: 1px solid rgba(222, 226, 230, 0.66);
+      &.active {
+        color: $g-white;
+        background-color: $g-brand-color;
+      }
+    }
+    &:last-child {
+      > .nav-link {
+        border-bottom-width: 0;
+      }
+    }
+  }
+}
+
+/* Medium devices (tablets, less than and equal to 991px) */
+@media (max-width: 991px) {
+  /* Sub-component-6 */
+  [class*="tab-nav-style-2-"] {
+    flex-direction: row !important;
+    justify-content: center !important;
+    margin-bottom: 30px;
+    > .nav-item {
+      width: auto;
+      margin: 0 10px;
+      > .nav-link {
+        font-size: 33px;
+        padding: 10px 10px;
+      }
+    }
+  }
+
+  /* Sub-component-6 v1,v3 */
+  .tab-nav-style-2-a,.tab-nav-style-2-c {
+  border-left-width: 0;
+  }
+
+  /* Sub-component-6 v4 */
+  .tab-nav-style-2-d {
+    > .nav-item {
+      > .nav-link {
+        border-bottom-width: 0;
+      }
+    }
+  }
+
+}
+

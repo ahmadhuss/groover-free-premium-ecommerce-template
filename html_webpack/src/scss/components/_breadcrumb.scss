@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the breadcrumb component.
+// -----------------------------------------------------------------------------
+
+/* Breadcrumb Component */
+
+.bread-crumb {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  word-wrap: break-word;
+  > li {
+    display: inline-block;
+    // Default font-size:14px
+    &.has-separator {
+      &:after {
+        content: '/';
+        margin: 0 4px;
+      }
+    }
+
+    &.has-colon {
+      &:after {
+        content: ':';
+        margin: 0 4px;
+      }
+    }
+  }
+}

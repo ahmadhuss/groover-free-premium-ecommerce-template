@@ -1,0 +1,54 @@
+// -----------------------------------------------------------------------------
+// This file contains only basic styles.
+// -----------------------------------------------------------------------------
+
+/*--------------------------------------------------------------
+#{$a}
+--------------------------------------------------------------*/
+
+/**
+ * Set up a background-color and height on the root and body element.
+ */
+html, body {
+  background-color: $g-white;
+  height: 100%;
+}
+
+/**
+ * Basic styles for headings
+ */
+h1, h2, h3, h4, h5, h6 {
+  color: $g-brand-secondary-color;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: $g-brand-secondary-color;
+  &:hover {
+    color: $g-brand-color;
+    text-decoration: none;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+a:not([href]):not([tabindex]) {
+  color: $g-brand-secondary-color;
+  cursor: pointer;
+  &:hover, &:focus {
+    color: $g-brand-color;
+  }
+}
+
+/**
+ * Basic style for image element
+ */
+img {
+  border: 0;
+  &:focus {
+    outline: none;
+  }
+}

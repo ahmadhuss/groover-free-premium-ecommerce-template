@@ -1,0 +1,313 @@
+// -----------------------------------------------------------------------------
+// This file contains all MegaMenu override styles.
+// -----------------------------------------------------------------------------
+
+/* MegaMenu */
+// Class that is default to hide VMenu
+.v-menu.v-close {
+  // span
+  > .v-title {
+    // icon
+    > i.fas.fa-angle-down {
+      transform: rotate(-180deg);
+    }
+  }
+  .v-wrapper {
+    display: none;
+  }
+}
+
+
+
+// Add this class on `a`, Change Icon to minus
+.v-less {
+  > i {
+    &:before {
+      content: "\f368";
+    }
+  }
+}
+
+
+
+// div
+.v-menu {
+  position: relative;
+  // span
+  > .v-title {
+    position: relative;
+    height: 52px;
+    line-height: 52px;
+    background: $g-brand-color;
+    border-radius: 8px 8px 0 0;
+    color: $g-white;
+    cursor: pointer;
+    display: block;
+    font-size: 13px;
+    overflow: hidden;
+    text-transform: uppercase;
+    padding-left: 20px;
+
+    > i.ion-md-menu {
+      font-size: 24px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    > i.fas.fa-angle-down {
+      position: absolute;
+      right: 15px;
+      font-size: 12px;
+      top: 21px; // vertical center half of the height 52px 26 - 4 = 21
+      transition: transform .3s ease-in-out;
+      transform: rotate(0);
+    }
+  }
+}
+
+
+// Main-list Level 1
+.v-list {
+  background-color: $g-white;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  position: absolute; // Relative to the div Shop By Category
+  top: 100%;
+  width: 100%;
+  z-index: 2;
+  border: 1px solid #ededed;
+  border-top-width: 0;
+
+  > li {
+    position: relative; // Because of Drop Downs
+    > a {
+      position: relative;
+      background: $g-white;
+      display: block;
+      font-size: 13px;
+      line-height: 24px;
+      overflow: hidden;
+      overflow-wrap: break-word;
+      padding: 8px 20px;
+      cursor: pointer;
+      > i:first-child {
+        margin-right: 9px;
+      }
+      > i.ion-ios-arrow-forward {
+        position: absolute;
+        top: 50%;
+        font-size: 11px;
+        right: 15px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+// div block
+.v-drop-right {
+  display: none;
+  padding: 30px 35px;
+  background: $g-white;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 100%;
+  // Default Width
+  width: 220px;
+  z-index: 999;
+
+  // Right Arrow
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: $g-white;
+    border-color: #f1f1f1 transparent transparent #f1f1f1;
+    border-style: solid;
+    border-width: 1px;
+    width: 15px;
+    height: 15px;
+    top: 15px;
+    left: -8px;
+    transform: rotate(-45deg);
+  }
+
+  // Recursive Styles
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+}
+
+
+
+// Level-2 ul
+.v-level-2 {
+  > li {
+    margin-bottom: 30px;
+    > a {
+      // border-bottom: 1px solid #e9ecef;
+      font-size: 14px;
+      margin-bottom: 10px;
+      display: block;
+      font-weight: bold;
+      transition: padding-left 300ms, opacity 300ms, color 300ms;
+      &:hover {
+        padding-left: 5px;
+      }
+    }
+
+    // Level 3
+    > ul {
+      > li {
+        > a {
+          display: block;
+          line-height: 28px;//24px
+          font-size: 13px;
+          transition: padding-left 300ms, opacity 300ms, color 300ms;
+          &:hover {
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// on drop down ul which has absolute position
+.v-yes-image {
+  > li {
+    position: relative;
+  }
+}
+
+.v-image {
+  position: absolute;
+  z-index: 2;
+  display: block;
+}
+
+.view-more-flag {
+  > a {
+    color: $g-brand-color;
+    text-decoration: underline;
+  }
+}
+
+
+// Used in drop downs + and -
+.v-button {
+  border-radius: 50%;
+  background-color: transparent;
+  box-shadow: 0 1px 2px rgba(0,0,0,.3);
+  cursor: pointer;
+  font-size: 12px;
+  display: inline-block;
+  border:none;
+  height: 24px;
+  width: 24px;
+  &:focus {
+    outline: 0;
+  }
+}
+
+// Large devices (desktops, 991px and up)
+@media (min-width: 991px) {
+  /**
+  * List items hover effect only work on the large devices.
+  */
+  .v-list {
+    > li {
+      &:hover {
+        > a {
+          color: $g-brand-color;
+        }
+        > .v-drop-right {
+          display: block;
+        }
+      }
+     > button {
+       display: none;
+     }
+    }
+
+  }
+}
+
+/* Medium devices (tablets, less than and equal to 991px) */
+@media (max-width: 991px) {
+
+  .v-list {
+    > li {
+      > button {
+        position: absolute;// Relative to list-item
+        top: 3px;
+        right: 0;
+        // class will add through jquery and it changes the button icon
+        &.js-icon-changed {
+          &:before {
+            content: '\f368';
+          }
+        }
+      }
+    }
+  }
+
+  // div
+  .v-wrapper {
+    height: 265px;
+    overflow-y: auto;
+    border: 1px solid $g-border-color;
+    padding: 15px;
+    background: $g-white;
+  }
+  // Level-1 Ul
+  .v-list {
+    position: static;
+    padding: 0;
+    border: none;
+    > li {
+      > a {
+        line-height: 20px;
+        padding: 10px 0;
+        > i.ion-ios-arrow-forward {
+          &:before {
+            content: '';
+          }
+        }
+      }
+    }
+  }
+
+  // Level 2
+  .v-drop-right {
+    background: #f9fafc;
+    box-shadow: none;
+    position: static;
+    // Default Width
+    width: auto !important;
+    // Right Arrow
+    &:before {
+      content: none;
+    }
+  }
+
+  .js-mega-menu-trigger {
+    > i.ion-ios-arrow-right {
+      &:before {
+        content: '\F208' !important;
+      }
+    }
+  }
+
+  .v-image {
+    display: none;
+  }
+
+}

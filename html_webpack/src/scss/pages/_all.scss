@@ -1,0 +1,37 @@
+// -----------------------------------------------------------------------------
+// `all.scss` is just typical import file that contains all code base of
+// the directory.
+// -----------------------------------------------------------------------------
+
+// Home-Page
+@import 'home-v1';
+// About-Page
+@import 'about';
+// Contact-Page
+@import 'contact';
+// FAQ-Page
+@import 'faq';
+// Store-Directory-Page
+@import 'store-directory';
+// Terms-&-Conditions-Page
+@import 'terms-conditions';
+// 404-Page
+@import '404';
+// Single-Product-Page
+@import 'single-product';
+// Blog-Page
+@import 'blog';
+// Blog-Detail-Page
+@import 'blog-detail';
+// Cart-&-Wishlist-Page
+@import 'cart-wishlist';
+// Checkout-And-Confirmation-Page
+@import 'checkout-and-confirmation';
+// Account-And-Lost-Password-Page
+@import 'account-and-lost-password';
+// Track-Order-Page
+@import 'track-order';
+// Shop-Page
+@import 'shop';
+// Deal-Page
+@import 'deal';

@@ -1,0 +1,358 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the shop page.
+// -----------------------------------------------------------------------------
+/*--------------------------------------------------------------
+#{$w}
+--------------------------------------------------------------*/
+.shop-intro {
+  margin-bottom: 30px;
+  text-align: center;
+  // This h3 is only used in shop-root-category
+  > h3 {
+    font-size: 14px;
+    margin: 0;
+    font-weight: 600;
+  }
+.bread-crumb {
+  > li {
+    font-size: 12px;
+    color: $g-brand-secondary-color;
+  }
+}
+  .is-marked {
+    font-weight: bold;
+  }
+}
+
+.associate-wrapper {
+  // Any filter doesn't have height greater than this.
+  max-height: 256px;
+}
+
+.total-fetch-items {
+  margin-left: 4px;
+  font-size: 12px;
+  color: $g-brand-secondary-color;
+}
+// Browser Categories, Size, Color, Brand, Price, Rating etc
+.title-name {
+  font-size: 13px;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  font-weight: bold;
+  border-bottom: 1px solid $g-border-color;
+}
+
+/* #{$w-1 } */
+.fetch-categories {
+  // For Sub-Category ex: Tops
+  // .fetch-mark-category
+  > .fetch-mark-category {
+    font-size: 13px;
+    font-weight: bold;
+    // For Sub-Sub-Category ex: T-shirts
+    // .yes-single
+    &.yes-single {
+      margin-bottom: 25px;
+    }
+  }
+
+  // This ul is used in Shop-root-category, Shop-sub-category,Shop-sub-sub-category
+  // and search results for root category
+  > ul {
+    list-style: none;
+    margin-bottom: 32px;
+    padding: 0 0 16px;
+    border-bottom: 1px solid $g-border-color;
+    > li {
+      > a {
+        font-size: 13px;
+      }
+      // Only For Level-2: Used in Shop-search results
+      > ul {
+        > li {
+          > a {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  // Recursive style: This ul is only used in Shop-search results for buttons functionality
+  ul {
+    > li {
+      > button {
+        padding: 0 6px;
+        border: none;
+        background-color: transparent;
+        display: inline-block;
+        font-size: 13px;
+        cursor: pointer;
+        &:focus {
+          outline: 0;
+        }
+        &:hover {
+          color: $g-brand-color;
+        }
+        &.js-open:before {
+          content: '\f368';
+        }
+      }
+
+      // Recursive Style: Level-2, level-3 and so on
+       ul {
+         display: none;
+         list-style: none;
+         margin: 0 0 0 20px;
+         padding: 0;
+          li {
+            a {
+             font-size: 13px;
+           }
+         }
+      }
+    }
+  }
+}
+
+/* #{$w-2 } */
+.page-bar {
+  border-bottom: 1px solid $g-border-color;
+  margin: 0 0 60px;
+  padding: 15px 0;
+  width: 100%;
+
+  .shop-settings {
+    float: left;
+    #grid-anchor, #list-anchor {
+      display: inline-block;
+      padding: 0 6px;
+      font-size: 20px;
+    }
+    #grid-anchor.active, #list-anchor.active {
+      color: $g-brand-color;
+    }
+
+  }
+
+  .toolbar-sorter, .toolbar-sorter-2 {
+    float: right;
+    .select-box {
+      height: 35px;
+    }
+  }
+
+  .toolbar-sorter {
+    margin-left: 16px;
+  }
+}
+
+/* #{$w-3} */
+
+.grid-style {
+  // For Equal Column
+  .product-item {
+    display: flex;
+  }
+
+  .item {
+    margin: 0 0 30px;// top, left right, bottom
+  }
+  .item-description {
+    display: none;
+  }
+
+}
+
+/* These styles are only apply on IE10 & IE11 */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .grid-style {
+    // For Equal Column
+    .product-item {
+      display: block;
+    }
+  }
+}
+
+/* #{$w-4} */
+/* By default row is set to display flex, also column has same property but by
+* removing this property, all other flex properties are futile. */
+.list-style {
+  display: block;
+  .product-item {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+  .item {
+    display: table;
+    border-spacing: 20px; // top bottom , left right
+    margin: 0 0 30px; // top, left right, bottom
+  }
+  // First portion
+  .image-container {
+    // important property
+    width: 215px;
+    max-width: 215px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .item-img-wrapper-link {
+    &:before {
+      content: none;
+    }
+  }
+
+  .item-action-behaviors {
+    text-align: center; // All Anchors are horizontally center
+    position: static;
+    opacity: 1;
+  }
+  .item-quick-look, .item-mail, .item-addwishlist, .item-addCart {
+    transform: translateX(0);
+    display: inline-block; // all anchors on same line
+    margin: 10px 4px;
+    border: 1px solid #eceff8;
+    border-radius: 0;
+    &:hover {
+      border-color: $g-brand-color;
+    }
+  }
+
+  // Second portion
+  .item-content {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .item-description {
+    font-size: 13px;
+    p {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+/* #{$w-5} */
+.pagination-area {
+  margin: 60px 0 0;
+  padding: 18px 0;
+  width: 100%;
+  text-align: center;
+
+  //div
+  .pagination-number {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      > li {
+        display: inline-block;
+        margin: 0 12px;
+        > a {
+          font-size: 12px;
+          color: #222;
+          display: inline-block;
+          transition: all .4s;
+          border: 1px solid transparent;
+          width: 32px;
+          height: 32px;
+          line-height: 32px;
+          border-radius: 50%;
+
+          &:hover {
+            border-color: $g-brand-color;
+          }
+        }
+      }
+
+
+      > li.active {
+        > a {
+          border-color: $g-brand-color;
+        }
+      }
+    }
+  }
+}
+
+/* #{$w-6} */
+.result-wrapper {
+  text-align: center;
+  .bread-crumb {
+    margin-bottom: 6px;
+    > li {
+      font-size:12px;
+    }
+    .is-marked {
+      font-weight: bold;
+    }
+  }
+  h4:first-of-type {
+    color: $g-brand-secondary-color;
+  }
+  h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: $g-text-color;
+    > a {
+      color: $g-brand-color;
+    }
+  }
+
+  h1 {
+    font-size: 120px;
+    font-weight: bold;
+    word-wrap: break-word;
+    letter-spacing: 4px;
+  }
+
+  form {
+    position: relative;
+    margin: 0 auto;// Horizontal Center Because Fixed Width
+    max-width: 580px;
+    overflow: hidden;
+    .text-field {
+      // Top , Right , Bottom , Left
+      padding: 0 86px 0 20px;
+      transition: all .3s;
+      &:focus + button {
+        border-left-color: $g-brand-secondary-color;
+        color: $g-brand-secondary-color;
+      }
+    }
+
+    .button {
+      position: absolute;// Relative to Form Component We Add it On A TextField
+      right: 0;
+      color: $g-text-color;
+      height: 45px;
+      border-left: 1px solid #eceff8;
+      top: 50%;
+      // border-left: 2px solid $secondry-color;
+      background-color: transparent;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+/* #{$w-7} */
+.search-results-wrapper {
+  h4:first-of-type {
+    color: $g-brand-secondary-color;
+    font-weight: bold;
+    i {
+      font-weight: normal;
+    }
+  }
+  h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: $g-text-color;
+    > a {
+      color: $g-brand-color;
+    }
+  }
+}
+

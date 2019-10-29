@@ -1,0 +1,22 @@
+/**
+ * This file contains every vendor dependency styles which are related
+ * to project.
+ */
+// Vendors
+@import
+  // Bootstrap framework from `node_modules`
+'~bootstrap/scss/bootstrap',
+  // Font Awesome
+'vendor/font-awesomev5.1.0/scss/fontawesome',
+'vendor/font-awesomev5.1.0/scss/fa-regular',
+'vendor/font-awesomev5.1.0/scss/fa-solid',
+'vendor/font-awesomev5.1.0/scss/fa-brands',
+  // Ion Icons
+'vendor/ion-iconsv4.2.0/scss/ionicons',
+  // Animate.css from `node_modules`
+'~animate.css/animate.css',
+  // jquery ui range slider
+'vendor/jquery-ui-range-slider/jquery-ui-range-slider';
+// Owl-carousel from `node_modules`
+$owl-image-path: '../images/vendor/owl-carousel/dist/';
+@import '~owl.carousel/src/scss/owl.carousel';

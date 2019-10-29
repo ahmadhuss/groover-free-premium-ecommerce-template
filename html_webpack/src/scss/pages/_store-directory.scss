@@ -1,0 +1,71 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the store directory page.
+// -----------------------------------------------------------------------------
+/*--------------------------------------------------------------
+#{$m}
+--------------------------------------------------------------*/
+.page-directory {
+  .directory-wrapper {
+    text-align: center;
+    margin-bottom: 22px;
+    border-bottom: 1px solid $g-border-color;
+
+    // RED HEADING
+    > h2 {
+      font-size: 22px;
+      > a {
+        color: $g-brand-color;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .row {
+      margin-bottom: 22px;
+    }
+  }
+}
+
+
+// ul list
+.dir-list-wrap {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  > li {
+    > .dir-list-main {
+      font-weight: bold;
+    }
+
+    > a {
+      font-size: 13px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Directory with Sub Wrapper ex: Smart-phones
+.dir-sub-wrapper {
+  .dir-sub-heading {
+    margin-bottom: 8px;
+    > a {
+      font-weight: bold;
+      font-size: 13px;
+    }
+  }
+}
+
+// Other Categories
+.dir-remain-categories {
+  margin-bottom: 30px;
+}
+
+.dir-remain-heading {
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 13px;
+  color: $g-brand-secondary-color;
+}

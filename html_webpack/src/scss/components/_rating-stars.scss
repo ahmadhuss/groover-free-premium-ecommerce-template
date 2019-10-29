@@ -1,0 +1,24 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the RatingStars component.
+// -----------------------------------------------------------------------------
+/* Rating Box component */
+/**
+ * Product Rating Stars
+ * Width of a 1-Star = 16 - 1 = 15px
+ */
+.star {
+  background: url(../images/rating-star/rating-star.png) 0 -16px repeat-x;
+  display: inline-block;
+  height: 16px;
+  position: relative;
+  top: 4px;
+  width: 75px;
+  margin-right: 6px;
+  span {
+    background: url(../images/rating-star/rating-star.png) 0 0 repeat-x;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+}
