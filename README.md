@@ -2,6 +2,7 @@
 
 [Live Preview](https://d2r00w08fz6ft0.cloudfront.net/groover-demo/home.html)
 
+*I want to thank all of you who give stars and fork the repo. I love you all and I have no words in my heart.*
 
 ![snap1](/doc-imgs/01_preview.png)
 
